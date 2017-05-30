@@ -2,6 +2,8 @@
 
 Alexa Skills is a repository for 3 Alexa Skills built for the Amazon Echo that helps programmers stay sharp with their programming concepts.  This repository contains skills that improve your algorithms, sorting algorithms and data structures.
 
+***
+
 [Alexa Store Link for Programmer Quiz][programmerquiz]  
 [Github Repo](https://github.com/peterzhen/ProgrammerQuiz)  
 
@@ -14,6 +16,8 @@ Alexa Skills is a repository for 3 Alexa Skills built for the Amazon Echo that h
 
 [Alexa Store Link for Daily Sorting Algorithm][dailysortingalgorithm]  
 [Github Repo](https://github.com/peterzhen/DailySortingAlgorithm)  
+
+***
 
 [programmerquiz]: https://www.amazon.com/THOS-Programmer-Quiz/dp/B06XT4V8VF/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1496019754&sr=1-1&keywords=programmer
 
