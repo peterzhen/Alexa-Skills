@@ -1,8 +1,13 @@
 ## Alexa Skills
 
-[Alexa Store Link for Programmer Quiz][programmerquiz]
-[Alexa Store Link for Daily Data Structure][dailydatastructure]
-[Alexa Store Link for Daily Sorting Algorithm][dailysortingalgorithm]
+[Alexa Store Link for Programmer Quiz][programmerquiz]  
+[Github Repo][https://github.com/peterzhen/ProgrammerQuiz]  
+
+[Alexa Store Link for Daily Data Structure][dailydatastructure]  
+[Github Repo][https://github.com/peterzhen/DailyDataStructure]  
+
+[Alexa Store Link for Daily Sorting Algorithm][dailysortingalgorithm]  
+[Github Repo][https://github.com/peterzhen/DailySortingAlgorithm]  
 
 [programmerquiz]: https://www.amazon.com/THOS-Programmer-Quiz/dp/B06XT4V8VF/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1496019754&sr=1-1&keywords=programmer
 
@@ -50,5 +55,23 @@ function handleNewQuestionRequest(response) {
     var speechOutput = "Here's your Programming Question: " + randomQuestion;
     var cardTitle = "Your Question";
     response.tellWithCard(speechOutput, cardTitle, speechOutput);
+}
+```
+
+For Daily Data Structure and Daily Sorting Algorithm, speech objects are created to request a response from Amazon Services.
+
+```javascript
+function createSpeechObject(optionsParam) {
+    if (optionsParam && optionsParam.type === 'SSML') {
+        return {
+            type: optionsParam.type,
+            ssml: optionsParam.speech
+        };
+    } else {
+        return {
+            type: optionsParam.type || 'PlainText',
+            text: optionsParam.speech || optionsParam
+        }
+    }
 }
 ```
